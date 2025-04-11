@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  text-decoration: none;
+  list-style: none ;
+}
+
+body {
+  background-color: rgb(31, 31, 107);
+  color: white;
+}
+
+header {
+  background-color: black;
+  padding: 10px;
+}
+
+header nav {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3rem;
+}
+
+div h4 {
+  font-family: 'Courier New', Courier, monospace;
+  color: bisque;
+}
+
+header nav .link a{
+  margin-left: 4rem;
+  color: white;
+}
+
+header nav .btn {
+  width: 15rem;
+}
+
+.btn a {
+  position: relative;
+  padding: 0.5rem 1.5rem;
+  border: 1px solid rgb(31, 31, 107);
+  color: white;
+  background: rgb(31, 31, 107) ; 
+  z-index: 1;
+  overflow: hidden;
+}
+
+.btn a:nth-child(2) {
+  margin-left: 2rem;
+  background: transparent;
+}
+
+.btn a:hover {
+  color: rgb(31, 31, 107);
+}
+
+.btn a::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background: white;
+  z-index: -1;
+  transition: .5s;
+  
+}
+
+.btn a:hover::before {
+  width: 100%;
+}
+
+.curasel {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 20%;
+  gap: 2rem;
+
+  scroll-snap-type: mandatory;
+
+  > li {
+    scroll-snap-align: center;
+  }
+
+}
